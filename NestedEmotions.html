@@ -4,21 +4,20 @@
     <title>Nested Emotions</title>
     <style>
         body {
-            background-color: #ffffff; /* Baby Blue color */
+            background-color: #E0FFFF; /* Baby Blue color */
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #89CFF0; /* Light Sky Blue color */
+            background-color: #87CEFA; /* Light Sky Blue color */
             text-align: center;
             padding: 20px;
         }
 
         h1 {
-            color: #ffffff; /* Navy color */
+            color: #000080; /* Navy color */
         }
 
         .content {
@@ -32,11 +31,42 @@
             justify-content: space-around;
         }
 
-        .emoji {
-            text-align: center;
+        .emoji-button {
             padding: 10px;
             font-size: 24px;
             cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        #emotion-text {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .input-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 2px solid #87CEFA;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .input-box {
+            margin-bottom: 15px;
+        }
+
+        .input-box label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .input-box select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -44,15 +74,66 @@
     <header>
         <h1>Nested Emotions</h1>
     </header>
-    <b1> How are you feeling today? </b1>
     <div class="content">
         <div class="emojis">
-            <div class="emoji" id="very-sad">😢</div>
-            <div class="emoji" id="sad">😞</div>
-            <div class="emoji" id="neutral">😐</div>
-            <div class="emoji" id="happy">😊</div>
-            <div class="emoji" id="very-happy">😄</div>
+            <button class="emoji-button" id="very-sad">😢</button>
+            <button class="emoji-button" id="sad">😞</button>
+            <button class="emoji-button" id="neutral">😐</button>
+            <button class="emoji-button" id="happy">😊</button>
+            <button class="emoji-button" id="very-happy">😄</button>
+        </div>
+        <div id="emotion-text">
+            <!-- Emotion text will be displayed here -->
+        </div>
+
+        <div class="input-container">
+            <div class="input-box">
+                <label for="daily-activity">Select your daily activity:</label>
+                <select id="daily-activity">
+                    <option value="worse">...</option>
+                    <option value="worse">I was bed rotting all day</option>
+                    <option value="not-so-good">I was in doors, but the blinds were open</option>
+                    <option value="neutral"> I stepped out the house</option>
+                    <option value="good">I took a walk</option>
+                    <option value="best">I worked out today</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-box">
+                <label for="meals-ate">Select the number of meals you ate today:</label>
+                <select id="meals-ate">
+                    <option value="worse">....</option>
+                    <option value="worse">I had nothing to eat  today</option>
+                    <option value="not-so-good">I had a snack</option>
+                    <option value="neutral">I had only 1 meal</option>
+                    <option value="good">I had 2 meals</option>
+                    <option value="best">I had 3 full meals and a snack</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-box">
+                <label for="sleep-quality">Select your quality of sleep (1-10):</label>
+                <select id="sleep-quality">
+                    <option value="worse">...</option>
+                    <option value="worse">1</option>
+                    <option value="worse">2</option>
+                    <option value="worse">3</option>
+                    <option value="worse">4</option>
+                    <option value="worse">5</option>
+                    <option value="worse">6</option>
+                    <option value="worse">7</option>
+                    <option value="worse">8</option>
+                    <option value="worse">9</option>
+                    <option value="worse">10</option>
+                </select>
+            </div>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        // JavaScript code to handle emoji button clicks and display emotion text
+        const emotionText = document.getElementById("emotion")
