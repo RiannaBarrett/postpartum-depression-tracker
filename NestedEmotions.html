@@ -6,6 +6,7 @@
         body {
             background-color: #ffffff; /* Baby Blue color */
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
         }
@@ -25,14 +26,33 @@
             margin: 0 auto;
             padding: 20px;
         }
+
+        .emojis {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .emoji {
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Nested Emotions</h1>
     </header>
+    <b1> How are you feeling today? </b1>
     <div class="content">
-        <!-- Your content goes here -->
+        <div class="emojis">
+            <div class="emoji" id="very-sad">😢</div>
+            <div class="emoji" id="sad">😞</div>
+            <div class="emoji" id="neutral">😐</div>
+            <div class="emoji" id="happy">😊</div>
+            <div class="emoji" id="very-happy">😄</div>
+        </div>
     </div>
 </body>
 </html>
