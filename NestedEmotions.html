@@ -4,20 +4,21 @@
     <title>Nested Emotions</title>
     <style>
         body {
-            background-color: #E0FFFF; /* Baby Blue color */
+            background-color: #ffffff; /* Baby Blue color */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
         header {
-            background-color: #87CEFA; /* Light Sky Blue color */
+            background-color: #89CFF0; /* Light Sky Blue color */
             text-align: center;
             padding: 20px;
         }
 
         h1 {
-            color: #000080; /* Navy color */
+            color: #ffffff; /* Navy color */
         }
 
         .content {
@@ -71,9 +72,12 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Nested Emotions</h1>
     </header>
+    How are you feeling today?
+
     <div class="content">
         <div class="emojis">
             <button class="emoji-button" id="very-sad">😢</button>
@@ -104,7 +108,7 @@
             <div class="input-box">
                 <label for="meals-ate">Select the number of meals you ate today:</label>
                 <select id="meals-ate">
-                    <option value="worse">....</option>
+                    <option value="worse">...</option>
                     <option value="worse">I had nothing to eat  today</option>
                     <option value="not-so-good">I had a snack</option>
                     <option value="neutral">I had only 1 meal</option>
@@ -136,4 +140,27 @@
 
     <script>
         // JavaScript code to handle emoji button clicks and display emotion text
-        const emotionText = document.getElementById("emotion")
+        const emotionText = document.getElementById("emotion-text");
+
+        const emojiButtons = document.querySelectorAll(".emoji-button");
+
+        emojiButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const emotion = this.id;
+                displayEmotionText(emotion);
+            });
+        });
+
+        function displayEmotionText(emotion) {
+            const emotions = {
+                "very-sad": "You seem very sad. Is there something bothering you?",
+                "sad": "You're feeling a bit down. Would you like to talk about it?",
+                "neutral": "You're feeling neutral right now. How can we brighten your day?",
+                "happy": "You're in a good mood. Keep spreading the positivity!",
+                "very-happy": "You're extremely happy! Keep smiling!"
+            };
+
+            emotionText.textContent = emotions[emotion];
+        }
+    </script>
+    </body>
