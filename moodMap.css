@@ -34,4 +34,66 @@ button {
     border: none;
     cursor: pointer;
 }
+.bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #89CFF0;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bar>.container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo {
+    border-radius: 40px;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-right: 516px;
+    color: rgb(227, 199, 58);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    /* background-color: #e0ac69; */
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile {
+    color: gold;
+}
+
+.sub {
+    background-color: gold;
+    padding: 3px;
+    border: 3px solid #0000;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+.hdd{
+    padding:70px;
+}
 
