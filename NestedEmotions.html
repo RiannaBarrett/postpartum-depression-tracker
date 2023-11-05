@@ -69,13 +69,81 @@
             padding: 10px;
             font-size: 16px;
         }
+        .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #89CFF0;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bar>.container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo {
+    border-radius: 40px;
+}
+.menu-button {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-right: 516px;
+    color: rgb(227, 199, 58);
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    /* background-color: #e0ac69; */
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.profile{
+    color:gold;
+}
+.sub{
+    background-color: gold;
+   padding:3px;
+   border:3px solid #0000;
+   border-radius: 15px;
+   display: block;
+   margin-left: auto;
+   margin-right: 0;
+}
+.feeling{
+    padding: 90px;
+}
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Nested Emotions</h1>
-    </header>
+<div class="bar">
+    <div class="container">
+        <img class="photo" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/09/baby-logos.jpg"
+            width="60" alt="This is an image baby">
+        <!-- <button id="toggle-color">Dark Mode</button> -->
+        <div class="menu-button">
+            <a href="index.html" class="btn">Home</a>
+            <a href="NestedEmotions.html" class="btn">Nested Emotions</a>
+            <a href="moodMap.html" class="btn">Mood Mappers</a>
+            <a href="#ppd" class="btn">PPD Care Companions</a>
+        </div>
+    </div>
+</div>
+<div class="feeling"> 
     How are you feeling today?
 
     <div class="content">
@@ -85,6 +153,7 @@
             <button class="emoji-button" id="neutral">😐</button>
             <button class="emoji-button" id="happy">😊</button>
             <button class="emoji-button" id="very-happy">😄</button>
+        </div>
         </div>
         <div id="emotion-text">
             <!-- Emotion text will be displayed here -->
