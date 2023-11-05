@@ -161,7 +161,6 @@
      font-size: 20px;
      /* Adjust the font size as needed */
      line-height: 1.5;
-     /* Adjust the line height as needed */
  }
 
 
@@ -171,7 +170,7 @@
  .bubble-button {
      background-color: #f7f7f7;
      border-radius: 20px;
-     min-height: 100px;
+     min-height: 60px;
      padding: 0px 30px;
      margin-top: 40px;
      flex-direction: row;
@@ -431,4 +430,20 @@
      bottom: 0;
      left: 0;
      z-index: 5;
+ }
+ .join-premium-btn {
+     background-color: #e0ac69;
+     color: white;
+     padding: 7px 4px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     text-align: center;
+     font-weight: bold;
+    
+ }
+
+ .join-premium-btn:hover {
+     background-color: #89CFF0;
+    
  }
